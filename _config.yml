@@ -1,81 +1,70 @@
-title: devlopr
-subtitle: A Portfolio Jekyll Theme Built for Developers
+title: RAGilSimoes' Page
+subtitle: Profile
 description: >- # this means to ignore newlines until "baseurl:"
-  devlopr-jekyll is a beautiful Jekyll Theme Built For Developers, which is optimized for speed and readability.
+  My personal page
 
-url: "" # the base hostname & protocol for your site, e.g. https://example.github.io
-baseurl: "" # the subpath of your site, e.g. /blog
+url: '' # the base hostname & protocol for your site, e.g. https://example.github.io
+baseurl: '' # the subpath of your site, e.g. /blog
 
 # Navigation
 urls:
-    - text: Home
-      url: /
-    - text: About
-      url: /about
-    - text: Blog
-      url: /blog
-    - text: Gallery
-      url: /gallery
-    - text: Shop
-      url : /shop
-    - text: Contact
-      url : /contact
-
+  - text: Home
+    url: /
+  - text: About
+    url: /about
+  - text: Blog
+    url: /blog
+  - text: Projects
+    url: /projects
+  - text: Shop
+    url: /shop
+  - text: Contact
+    url: /contact
 
 # Edit Author details (For multi authors check _data/authors.yml)
 
 author_logo: profile.png
-author: John Doe
-author_bio: Hi, my name is John Doe. I built this site using devlopr-jekyll :D
-author_email: "mail@sujaykundu.com"
-author_location: India
-author_website_url: "https://sujaykundu.com"
-typewrite-text: devlopr is a jekyll framework built for developers. You can edit this in _config.yml file
+author: Ricardo Simões
+author_bio: Hi, my name is Ricardo Simões. Computer Engineering Student at Universidade de Coimbra, currently on my Master's degree, having finished my Bachelor with a final grade of 15. I love Software Development, and I'm currently working on some personal projects, such as BookLogr. I like to go to the gym, listen to music, play football and watching movies and series.
+author_email: 'ricardo.andre.simoes@gmail.com'
+author_location: Portugal
+#author_website_url: 'www.linkedin.com/in/ricardo-andré-simões-0716b4280'
+typewrite-text: Software Developer Enthusiast
 hero_cover_img: sample_cover.jpg # replace this for changing homepage cover (eg. try cover.jpeg). Image should be in /assets/img
+author_skills: Python, Java, Javascript/HTML/CSS, TypeScript, React, Cisco Routers, API Development, PHP
 
 # Experiences
 author_work_experiences:
-            - company_name: Google
-              company_logo: google.png
-              company_url: https://google.com
-              designation: Software Engineer
-              description: Worked on various Google Products
-              visibility: true
-            - company_name: Microsoft
-              company_logo: microsoft.png
-              company_url: https://microsoft.com
-              designation: Azure Developer
-              description: Worked on various Azure Cloud Products
-              visibility: true
+  - company_name: BSWEBCONNECT
+    company_logo: 2bwebconnect_logo.png
+    company_url: https://bswebconnect.pt/
+    designation: Fullstack Developer
+    description: Summer Internship refactoring a Web App in PHP and improving the existing API and Database.
+    visibility: true
 
 # Education
 author_education_details:
-              - college_logo: mit.png
-                college_name: MIT
-                college_url: https://mit.org
-                college_degree: CS Engineer
-                description: Bachelor of Technology
-                visibility: true
+  - college_logo: uc_logo.png
+    college_name: Universidade de Coimbra
+    college_url: https://www.uc.pt/
+    college_degree: CS Engineer
+    description: Bachelor of Technology
+    visibility: true
 
 # Projects
 author_project_details:
-              - project_thumbnail: gamershub.png
-                project_title: Gamers Hub
-                project_description: A Platform built for Gamers and Game Devs
-                project_url: https://gamershub.in
-                visibility: true
-              - project_thumbnail: hack4r.PNG
-                project_title: Hack4r
-                project_description: A Platform built for Hackers and Penetration Testers
-                project_url: https://hack4r.com
-                visibility: true
+  - project_thumbnail: gamershub.png
+    project_title: ShelfLogr
+    project_description: Mobile App that allows the user to log the books read, create wishlists and receive AI given suggestions
+    project_url: ''
+    visibility: true
 
 # social links
-twitter_username: xplor4r
-github_username:  sujaykundu777
-instagram_username: xplor4r
+#twitter_username: xplor4r
+github_username: RAGilSimoes
+#instagram_username: xplor4r
 # facebook_username: johndoe
-# linkedin_username: johndoe
+linkedin_username: ricardo-andré-simões-0716b4280
 # behance_username: johndoe
 # medium_username: johndoe
 # telegram_username: johndoe
@@ -87,15 +76,13 @@ instagram_username: xplor4r
 # disqus_shortname: sujay-kundu
 # hyvor_talk_website_id: 476
 
-# wakatime username (coding activity)
-wakatime_username: sujaykundu777
-
 # mailchimp embedded form url (newsletter):
-mailchimp_form_url: https://sujaykundu.us10.list-manage.com/subscribe/post?u=50bab1c85eae24ecfb0f68361&amp;id=3a2dd721d0
+# mailchimp_form_url: https://sujaykundu.us10.list-manage.com/subscribe/post?u=50bab1c85eae24ecfb0f68361&amp;id=3a2dd721d0
 
 # contact form - (choose formspress or getform)
 # getform_endpoint: 83b703c3-9e47-4df4-ac55-e24d7eb02abc
-formspree_email: johndoe@gmail.com
+
+#formspree_email: johndoe@gmail.com
 
 # releases - widget can be (sidebar, modal or embed)
 olvy_organization: devlopr
@@ -114,7 +101,7 @@ show_author_project_details: true
 # pagination of posts
 paginate: 4
 per_page: 4
-paginate_path: "/blog/page/:num/"
+paginate_path: '/blog/page/:num/'
 
 # minify
 # compress_html:
@@ -139,20 +126,17 @@ collections:
     output: true
 
 defaults:
-  -
-    scope:
-      path: "gallery"
+  - scope:
+      path: 'gallery'
     values:
       permalink: /:path/:basename:output_ext
-  -
-    scope:
-      path: ""
+  - scope:
+      path: ''
       type: authors
     values:
       layout: author
       permalink: /blog/authors/:slug
-  -
-    scope:
+  - scope:
       path: 'assets/**'
     values:
       sitemap: false
@@ -166,18 +150,17 @@ plugins:
   - jekyll-feed
 
   # jekyll admin is causing issues with github pages, so it's disabled by default
-  # - jekyll-admin 
+  - jekyll-admin
 
 # Jekyll Admin Config
 # jekyll_admin:
-  # hidden_links:
-  #   - posts
-  #   - pages
-  #   - staticfiles
-  #   - datafiles
-  #   - configuration
-  # homepage: "posts"
-
+# hidden_links:
+#   - posts
+#   - pages
+#   - staticfiles
+#   - datafiles
+#   - configuration
+# homepage: "posts"
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -232,6 +215,5 @@ exclude:
   - assets/bower_components/lightgallery/test/lightgallery.html
   - assets/bower_components/masonry-layout/README.md
   - assets/bower_components/imagesloaded/README.md
-
 
 destination: ./build
