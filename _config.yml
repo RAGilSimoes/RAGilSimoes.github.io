@@ -1,5 +1,5 @@
-title: RAGilSimoes' Page
-subtitle: Profile
+title: Ricardo André Simões
+subtitle: RAGilSimoes
 description: >- # this means to ignore newlines until "baseurl:"
   My personal page
 
@@ -25,7 +25,7 @@ urls:
 
 author_logo: profile.png
 author: Ricardo Simões
-author_bio: Hi, my name is Ricardo Simões. Computer Engineering Student at Universidade de Coimbra, currently on my Master's degree, having finished my Bachelor with a final grade of 15. I love Software Development, and I'm currently working on some personal projects, such as BookLogr. I like to go to the gym, listen to music, play football and watching movies and series.
+author_bio: Hi, my name is Ricardo Simões. Computer Engineering Student at Universidade de Coimbra, currently on my Master's degree, having finished my Bachelor with a final grade of 15. I love Software Development, and I'm currently working on some personal projects, such as ShelfLogr. I like to go to the gym, listen to music, play football and watching movies and series.
 author_email: 'ricardo.andre.simoes@gmail.com'
 author_location: Portugal
 #author_website_url: 'www.linkedin.com/in/ricardo-andré-simões-0716b4280'
@@ -47,8 +47,8 @@ author_education_details:
   - college_logo: uc_logo.png
     college_name: Universidade de Coimbra
     college_url: https://www.uc.pt/
-    college_degree: CS Engineer
-    description: Bachelor of Technology
+    college_degree: Computer Engineering
+    description: Bachelor in Computer Engineering with a final grade of 15. Worked with Python, Java, C and C++, Cisco Routers, API, Databases and Distributed Systems
     visibility: true
 
 # Projects
@@ -57,6 +57,72 @@ author_project_details:
     project_title: ShelfLogr
     project_description: Mobile App that allows the user to log the books read, create wishlists and receive AI given suggestions
     project_url: ''
+    visibility: false
+
+# Certificates
+author_certificates_details:
+  - certificate_thumbnail: bachelors_degree.png
+    certificate_title: Bachelor's Degree
+    certificate_skills: Python, Java, C and C++, Cisco Routers, API, Databases, Distributed Systems
+    certificate_url:
+    certificate_provider: Universidade de Coimbra
+    certificate_provider_url: https://www.uc.pt/
+    visibility: true
+
+  - certificate_thumbnail: software_engineering_principles_python.png
+    certificate_title: Software Engineering Principles in Python
+    certificate_skills: Python, Software Development, Softare Engineering Principles
+    certificate_url: https://www.datacamp.com/completed/statement-of-accomplishment/course/a5d605f07b9b6763c085244fd365eac103df70fd
+    certificate_provider: Datacamp
+    certificate_provider_url: https://app.datacamp.com/
+    visibility: true
+
+  - certificate_thumbnail: introduction_to_mcp.png
+    certificate_title: Introduction To Model Context Protocol
+    certificate_skills: Model Context Protocol
+    certificate_url: https://www.datacamp.com/completed/statement-of-accomplishment/course/960a4225b8735d8778216b26fa3605109aa5f110
+    certificate_provider: Datacamp
+    certificate_provider_url: https://app.datacamp.com/
+    visibility: true
+
+  - certificate_thumbnail: docker_IEEE.png
+    certificate_title: Docker Workshop
+    certificate_skills: Docker
+    certificate_url:
+    certificate_provider: IEEE
+    certificate_provider_url: https://uc.ieee-pt.org/
+    visibility: true
+
+  - certificate_thumbnail: ai_engineer_for_developers.png
+    certificate_title: AI Engineer For Developers Associate
+    certificate_skills: OpenAI API, Pinecone, HuggingFace, LangChain, Chatbots
+    certificate_url: https://www.datacamp.com/certificate/AIEDA0011710829364
+    certificate_provider: Datacamp
+    certificate_provider_url: https://app.datacamp.com/
+    visibility: true
+
+  - certificate_thumbnail: intermediate_workflow_automation_with_n8n.png
+    certificate_title: Intermediate Workflow Automation with n8n
+    certificate_skills: n8n, Workflow Automation
+    certificate_url: https://www.datacamp.com/completed/statement-of-accomplishment/course/781df44b426bf20e4f86cd5d738f73f1c8581000
+    certificate_provider: Datacamp
+    certificate_provider_url: https://app.datacamp.com/
+    visibility: true
+
+  - certificate_thumbnail: introduction_to_workflow_automation_with_n8n.png
+    certificate_title: Introduction to Workflow Automation with n8n
+    certificate_skills: n8n, Worflow Automation
+    certificate_url: https://www.datacamp.com/completed/statement-of-accomplishment/course/3b647a49be8156090b259e80a576ee02cc549b0b
+    certificate_provider: Datacamp
+    certificate_provider_url: https://app.datacamp.com/
+    visibility: true
+
+  - certificate_thumbnail: postman_api_fundamentals_student_expert.png
+    certificate_title: Postman API Fundamentals Student Expert
+    certificate_skills: Postman, API
+    certificate_url: https://badges.parchment.com/public/assertions/a7X-LdVZQdm8MYwvfgGsug
+    certificate_provider: Postman
+    certificate_provider_url: https://www.postman.com/
     visibility: true
 
 # social links
@@ -97,6 +163,7 @@ permalink: pretty
 show_author_work_experiences: true
 show_author_education_details: true
 show_author_project_details: true
+show_author_certificates_details: true
 
 # pagination of posts
 paginate: 4

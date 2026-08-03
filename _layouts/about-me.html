@@ -76,16 +76,17 @@ layout: default
       <div id="author_projects" class="card">
         <h1 class="card-title">Projects</h1>
         <br />
-        {% for project in site.author_project_details %} {% if
-        project.visibility == true %}
+        {% assign visible_projects = site.author_project_details | where:
+        "visibility", true %} {% if visible_projects.size > 0 %} {% for project
+        in visible_projects %}
         <div class="row" id="project-card">
-          <div class="col-md-6">
+          <div class="col-md-2">
             <img
               src="{{site.url}}{{site.baseurl}}/assets/img/{{project.project_thumbnail}}"
               class="project-img"
             />
           </div>
-          <div class="col-md-4 center">
+          <div class="col-md-10 center">
             <h4 class="experience-title">{{ project.project_title }}</h4>
             <h6 class="experience-info">{{ project.project_info}}</h6>
             <p class="experience-desc">{{ project.project_description }}</p>
@@ -97,7 +98,9 @@ layout: default
           </div>
         </div>
         <br />
-        {% endif %} {% endfor %}
+        {% endfor %} {% else %}
+        <h2 class="no-projects">Working to get some projects going</h2>
+        {% endif %}
       </div>
       {% endif %} {% if site.show_author_work_experiences == true %}
       <div class="card">
@@ -112,7 +115,7 @@ layout: default
               class="company-logo"
             />
           </div>
-          <div class="col-md-6">
+          <div class="col-md-10">
             <h4 class="experience-title">{{ exp.designation }}</h4>
             <h6 class="experience-info">{{ exp.company_name}}</h6>
             <p class="experience-desc">{{ exp.description }}</p>
@@ -134,7 +137,7 @@ layout: default
               class="company-logo"
             />
           </div>
-          <div class="col-md-6">
+          <div class="col-md-10">
             <h4 class="experience-title">{{detail.college_degree }}</h4>
             <h6 class="experience-info">{{detail.college_name}}</h6>
             <p class="experience-desc">{{detail.description}}</p>
@@ -142,6 +145,50 @@ layout: default
           </div>
         </div>
         {% endif %} {% endfor %}
+      </div>
+      {% endif %} {% if site.show_author_certificates_details == true %}
+      <div class="card">
+        <h1 class="card-title">Certificates</h1>
+        <br />
+        {% assign visible_certs = site.author_certificates_details | where:
+        "visibility", true %}
+        <div class="certificates-scroll-container">
+          {% for detail in visible_certs %}
+          <div class="row certificate-card">
+            <div class="col-md-3">
+              <a
+                href="{{site.url}}{{site.baseurl}}/assets/img/certificates/{{ detail.certificate_thumbnail}}"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="{{site.url}}{{site.baseurl}}/assets/img/certificates/{{ detail.certificate_thumbnail}}"
+                  class="certificate-img"
+                />
+              </a>
+            </div>
+            <div class="col-md-9 certificate-info">
+              <h4 class="certificate-title">{{detail.certificate_title }}</h4>
+              <h6 class="certificate-info">
+                Provided by:
+                <a href="{{detail.certificate_provider_url}}"
+                  >{{detail.certificate_provider}}</a
+                >
+              </h6>
+              <p class="certificate-desc">
+                Skills: {{detail.certificate_skills}}
+              </p>
+              {% if detail.certificate_url %}
+              <p>
+                <a href="{{detail.certificate_url}}">Certificate URL</a>
+              </p>
+              {% endif %}
+            </div>
+          </div>
+          {% unless forloop.last %}
+          <hr class="certificate-divider" />
+          {% endunless %} {% endfor %}
+        </div>
       </div>
       {% endif %}
     </div>

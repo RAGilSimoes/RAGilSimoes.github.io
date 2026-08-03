@@ -60,3 +60,12 @@ Se ao correres um comando do bundle ou tentares arrancar o servidor o Ruby recla
 #### Erro ao instalar a gema wdm:
 
 O wdm costuma falhar a compilação nas versões mais recentes do Ruby no Windows. Apenas ignora ou remove essa linha do Gemfile, pois o Jekyll tem um método de fallback para ler as alterações aos ficheiros sem necessitar dessa gema.
+
+---
+
+## 📄 Licença e Direitos de Autor
+
+Este repositório contém uma mistura de código aberto e conteúdo estritamente pessoal. Por favor, respeita as seguintes regras de licenciamento:
+
+- **O Código e o Tema (Open Source):** A estrutura web (HTML, CSS, Liquid) é baseada num tema de código aberto. Estás à vontade para clonar, estudar e usar o código estrutural para construíres o teu próprio site, respeitando a licença original do criador do tema.
+- **O Conteúdo Pessoal (Todos os Direitos Reservados):** Todo o conteúdo escrito (artigos do blog, descrições de projetos, secção "Sobre Mim"), fotografias pessoais, currículo e certificados **são da minha autoria exclusiva (© Ricardo André Simões)**. Não tens permissão para copiar, reproduzir ou utilizar a minha identidade, textos ou imagens nos teus próprios projetos.

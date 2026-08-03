@@ -262,7 +262,8 @@ h6 {
   line-height: 1.1;
 }
 
-.no-articles {
+.no-articles,
+.no-projects {
   text-align: center;
 }
 
@@ -796,9 +797,58 @@ header {
   }
 }
 
+.certificate-img {
+  width: auto;
+  max-width: 100%;
+  height: 220px;
+  object-fit: contain;
+  object-position: left center;
+  border-radius: 4px;
+  display: block;
+}
+
+.certificate-card {
+  margin: 15px 0px;
+}
+
+.certificate-divider {
+  border: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  margin: 25px 0;
+}
+
+.certificate-info {
+  align-self: center;
+}
+
+.certificates-scroll-container {
+  max-height: 650px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: 5px;
+}
+
+.certificates-scroll-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.certificates-scroll-container::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+}
+
+.certificates-scroll-container::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+
+.certificates-scroll-container::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
 .company-logo {
-  width: 100px;
-  height: 100px;
+  width: 130px;
+  height: 130px;
 }
 
 .author-profile-img {
