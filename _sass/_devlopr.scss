@@ -817,15 +817,16 @@ header {
   margin: 25px 0;
 }
 
-.certificate-info {
-  align-self: center;
-}
-
 .certificates-scroll-container {
   max-height: 650px;
   overflow-y: auto;
   overflow-x: hidden;
-  padding-right: 5px;
+  padding: 0px 15px;
+}
+
+.certificate-info {
+  align-self: center;
+  padding: 15px;
 }
 
 .certificates-scroll-container::-webkit-scrollbar {
