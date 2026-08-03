@@ -12,14 +12,14 @@ urls:
     url: /
   - text: About
     url: /about
-  - text: Blog
-    url: /blog
-  - text: Projects
-    url: /projects
-  - text: Shop
-    url: /shop
-  - text: Contact
-    url: /contact
+  # - text: Blog
+  #   url: /blog
+  # - text: Projects
+  #   url: /projects
+  # - text: Shop
+  #   url: /shop
+  # - text: Contact
+  #   url: /contact
 
 # Edit Author details (For multi authors check _data/authors.yml)
 
@@ -53,7 +53,7 @@ author_education_details:
 
 # Projects
 author_project_details:
-  - project_thumbnail: gamershub.png
+  - project_thumbnail: under_construction.png
     project_title: ShelfLogr
     project_description: Mobile App that allows the user to log the books read, create wishlists and receive AI given suggestions
     project_url: ''
