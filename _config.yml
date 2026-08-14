@@ -31,7 +31,7 @@ author_location: Portugal
 #author_website_url: 'www.linkedin.com/in/ricardo-andré-simões-0716b4280'
 typewrite-text: Software Developer Enthusiast
 hero_cover_img: sample_cover.jpg # replace this for changing homepage cover (eg. try cover.jpeg). Image should be in /assets/img
-author_skills: Python, Java, Javascript/HTML/CSS, TypeScript, React, Cisco Routers, API Development, PHP
+author_skills: Python, Java, Javascript/HTML/CSS, TypeScript, React, Cisco Routers, API Development, PHP, Node.JS, Express.JS, Ionic
 
 # Experiences
 author_work_experiences:
@@ -53,11 +53,12 @@ author_education_details:
 
 # Projects
 author_project_details:
-  - project_thumbnail: under_construction.png
+  - project_thumbnail: ShelfLogr_logo.png
     project_title: ShelfLogr
     project_description: Mobile App that allows the user to log the books read, create wishlists and receive AI given suggestions
-    project_url: ''
-    visibility: false
+    project_url: 'https://github.com/RAGilSimoes/ShelfLogr'
+    visibility: true
+    tech-stack: Ionic, React, Node.JS, Express.JS, Neon.tech, PostgreSQL
 
 # Certificates
 author_certificates_details:

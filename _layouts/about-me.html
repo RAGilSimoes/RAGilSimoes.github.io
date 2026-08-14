@@ -83,16 +83,18 @@ layout: default
           <div class="col-md-2">
             <img
               src="{{site.url}}{{site.baseurl}}/assets/img/{{project.project_thumbnail}}"
-              class="project-img"
+              class="company-logo"
             />
           </div>
           <div class="col-md-10 center">
-            <h4 class="experience-title">{{ project.project_title }}</h4>
-            <h6 class="experience-info">{{ project.project_info}}</h6>
+            <h4 class="experience-title">
+              {{ project.project_title }} - <i>Still in development</i>
+            </h4>
             <p class="experience-desc">{{ project.project_description }}</p>
+            <p class="experience-info">Tech Stack: {{project.tech-stack}}</p>
             <p>
               <a class="project-link" href="{{project.project_url}}"
-                >{{ project.project_url}}</a
+                >Link to GitHub Repo</a
               >
             </p>
           </div>
