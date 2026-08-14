@@ -851,9 +851,30 @@ header {
   background: rgba(255, 255, 255, 0.4);
 }
 
-.company-logo {
+.logo-white-source {
+  filter: invert(1);
+}
+
+html[data-theme='dark'] .logo-white-source {
+  filter: invert(0);
+  background-color: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+}
+
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme='light']) .logo-white-source {
+    filter: invert(0);
+    background-color: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+  }
+}
+
+.education-logo {
   width: 130px;
   height: 130px;
+  transition: background-color 0.3s ease;
 }
 
 .author-profile-img {

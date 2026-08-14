@@ -91,22 +91,22 @@ layout: default
           <div class="col-md-2">
             <img
               src="{{site.url}}{{site.baseurl}}/assets/img/{{project.project_thumbnail}}"
-              class="company-logo img-fluid"
+              class="project-logo img-fluid"
             />
           </div>
           <div class="col-12 col-md-9 col-lg-10 center">
-            <h4 class="experience-title">
+            <h4 class="project-title">
               {{ project.project_title }} {% if project.developing %} -
               <i>Still in development</i>
               {% endif %}
             </h4>
 
-            <p class="experience-desc">
+            <p class="project-desc">
               <span style="font-weight: bolder">Description:</span> {{
               project.project_description }}
             </p>
 
-            <p class="experience-info" style="font-weight: bolder">
+            <p class="project-info" style="font-weight: bolder">
               Tech Stack:
             </p>
 
@@ -188,7 +188,7 @@ layout: default
                     href="{{ exp.company_url }}"
                     target="_blank"
                     style="color: #6c757d; text-decoration: none"
-                    class="university-link"
+                    class="experience-link"
                   >
                     {{ exp.company_name }}
                     <i
@@ -219,8 +219,8 @@ layout: default
               >
                 <img
                   src="{{site.url}}{{site.baseurl}}/assets/img/{{ detail.college_logo}}"
-                  class="company-logo img-fluid"
-                  style="max-width: 90px; border-radius: 8px"
+                  class="education-logo img-fluid logo-white-source"
+                  style=" border-radius: 8px"
                 />
               </div>
 
@@ -228,7 +228,7 @@ layout: default
                 <div
                   class="d-flex flex-column flex-lg-row justify-content-between align-items-lg-start mb-1"
                 >
-                  <h4 class="experience-title mb-1" style="font-weight: 600">
+                  <h4 class="education-title mb-1" style="font-weight: 600">
                     {{ detail.college_degree }}
                   </h4>
                   <span
@@ -240,12 +240,12 @@ layout: default
                   </span>
                 </div>
 
-                <h6 class="experience-info mb-3">
+                <h6 class="education-info mb-3">
                   <a
                     href="{{ detail.college_url }}"
                     target="_blank"
                     style="color: #6c757d; text-decoration: none"
-                    class="university-link"
+                    class="education-link"
                   >
                     {{ detail.college_name }}
                     <i
@@ -274,7 +274,7 @@ layout: default
                 {% endif %}
 
                 <p
-                  class="experience-desc"
+                  class="education-desc"
                   style="line-height: 1.6; color: #adb5bd"
                 >
                   {{ detail.description }}
