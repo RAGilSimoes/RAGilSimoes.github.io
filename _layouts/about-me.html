@@ -68,6 +68,11 @@ layout: default
 
         {%- include author_skills.html -%}
       </div>
+      <div class="card">
+        <h1>Languages</h1>
+
+        {%- include languages.html -%}
+      </div>
     </div>
     <div class="col-lg-8">
       {% if site.author_bio %}
@@ -151,99 +156,212 @@ layout: default
         <br />
         {% for exp in site.author_work_experiences %} {% if exp.visibility ==
         true %}
-        <div class="row">
-          <div class="col-12 col-md-3 col-lg-2">
-            <img
-              src="{{site.url}}{{site.baseurl}}/assets/img/{{ exp.company_logo }}"
-              class="company-logo img-fluid"
-            />
-          </div>
-          <div class="col-12 col-md-9 col-lg-10 center">
-            <h4 class="experience-title">{{ exp.designation }}</h4>
-            <h6 class="experience-info">{{ exp.company_name}}</h6>
-            <p class="experience-desc">{{ exp.description }}</p>
-            <p>
-              <a href="{{exp.company_url}}" target="_blank"
-                >{{ exp.company_url}}</a
-              >
-            </p>
-          </div>
-        </div>
-        {% endif %} {% endfor %}
-      </div>
-      {% endif %} {% if site.show_author_education_details == true %}
-      <div class="card">
-        <h1 class="card-title">Education</h1>
-        <br />
-        {% for detail in site.author_education_details %} {% if
-        detail.visibility == true %}
-        <div class="row">
-          <div class="col-12 col-md-3 col-lg-2">
-            <img
-              src="{{site.url}}{{site.baseurl}}/assets/img/{{ detail.college_logo}}"
-              class="company-logo img-fluid"
-            />
-          </div>
-          <div class="col-12 col-md-9 col-lg-10 center">
-            <h4 class="experience-title">{{detail.college_degree }}</h4>
-            <h6 class="experience-info">{{detail.college_name}}</h6>
-            <p class="experience-desc">{{detail.description}}</p>
-            <p>
-              <a href="{{detail.college_url}}" target="_blank"
-                >{{ detail.college_url}}</a
-              >
-            </p>
-          </div>
-        </div>
-        {% endif %} {% endfor %}
-      </div>
-      {% endif %} {% if site.show_author_certificates_details == true %}
-      <div class="card">
-        <h1 class="card-title">Certificates</h1>
-        <br />
-        {% assign visible_certs = site.author_certificates_details | where:
-        "visibility", true %}
-        <div class="certificates-scroll-container">
-          {% for detail in visible_certs %}
-          <div class="row certificate-card">
-            <div class="col-md-3">
-              <a
-                href="{{site.url}}{{site.baseurl}}/assets/img/certificates/{{ detail.certificate_thumbnail}}"
-                target="_blank"
-                rel="noopener noreferrer"
+            <div class="row mb-4">
+              <div
+                class="col-12 col-md-3 col-lg-2 text-center text-md-left mb-3 mb-md-0"
               >
                 <img
-                  src="{{site.url}}{{site.baseurl}}/assets/img/certificates/{{ detail.certificate_thumbnail}}"
-                  class="certificate-img"
+                  src="{{site.url}}{{site.baseurl}}/assets/img/{{ exp.company_logo}}"
+                  class="company-logo img-fluid"
+                  style="max-width: 90px; border-radius: 8px"
                 />
-              </a>
+              </div>
+
+              <div class="col-12 col-md-9 col-lg-10">
+                <div
+                  class="d-flex flex-column flex-lg-row justify-content-between align-items-lg-start mb-1"
+                >
+                  <h4 class="experience-title mb-1" style="font-weight: 600">
+                    {{ exp.designation }}
+                  </h4>
+                  <span
+                    class="text-muted"
+                    style="font-size: 0.9rem; white-space: nowrap"
+                  >
+                    <i class="far fa-calendar-alt mr-1"></i> {{ exp.period[0]
+                    }} — {{ exp.period[1] }}
+                  </span>
+                </div>
+
+                <h6 class="experience-info mb-3">
+                  <a
+                    href="{{ exp.company_url }}"
+                    target="_blank"
+                    style="color: #6c757d; text-decoration: none"
+                    class="university-link"
+                  >
+                    {{ exp.company_name }}
+                    <i
+                      class="fas fa-external-link-alt"
+                      style="font-size: 0.75rem; margin-left: 4px"
+                    ></i>
+                  </a>
+                </h6>
+                <p
+                  class="experience-desc"
+                  style="line-height: 1.6; color: #adb5bd"
+                >
+                  {{ exp.description }}
+                </p>
+              </div>
             </div>
-            <div class="col-md-9 certificate-info">
-              <h4 class="certificate-title">{{detail.certificate_title }}</h4>
-              <h6 class="certificate-info">
-                Provided by:
-                <a href="{{detail.certificate_provider_url}}" target="_blank"
-                  >{{detail.certificate_provider}}</a
+          {% endif %} {% endfor %} 
+      </div>
+          {% endif %}{% if site.show_author_education_details == true %}
+          <div class="card">
+            <h1 class="card-title">Education</h1>
+            <br />
+            {% for detail in site.author_education_details %} {% if
+            detail.visibility == true %}
+            <div class="row mb-4">
+              <div
+                class="col-12 col-md-3 col-lg-2 text-center text-md-left mb-3 mb-md-0"
+              >
+                <img
+                  src="{{site.url}}{{site.baseurl}}/assets/img/{{ detail.college_logo}}"
+                  class="company-logo img-fluid"
+                  style="max-width: 90px; border-radius: 8px"
+                />
+              </div>
+
+              <div class="col-12 col-md-9 col-lg-10">
+                <div
+                  class="d-flex flex-column flex-lg-row justify-content-between align-items-lg-start mb-1"
                 >
-              </h6>
-              <p class="certificate-desc">
-                Skills: {{detail.certificate_skills}}
-              </p>
-              {% if detail.certificate_url %}
-              <p>
-                <a href="{{detail.certificate_url}}" target="_blank"
-                  >Certificate URL</a
+                  <h4 class="experience-title mb-1" style="font-weight: 600">
+                    {{ detail.college_degree }}
+                  </h4>
+                  <span
+                    class="text-muted"
+                    style="font-size: 0.9rem; white-space: nowrap"
+                  >
+                    <i class="far fa-calendar-alt mr-1"></i> {{ detail.period[0]
+                    }} — {{ detail.period[1] }}
+                  </span>
+                </div>
+
+                <h6 class="experience-info mb-3">
+                  <a
+                    href="{{ detail.college_url }}"
+                    target="_blank"
+                    style="color: #6c757d; text-decoration: none"
+                    class="university-link"
+                  >
+                    {{ detail.college_name }}
+                    <i
+                      class="fas fa-external-link-alt"
+                      style="font-size: 0.75rem; margin-left: 4px"
+                    ></i>
+                  </a>
+                </h6>
+
+                {% if detail.final_grade %}
+                <div class="mb-3">
+                  <span
+                    style="
+                      background-color: #2b3035;
+                      border: 1px solid #495057;
+                      border-radius: 12px;
+                      padding: 4px 10px;
+                      font-size: 0.85rem;
+                      color: #e9ecef;
+                    "
+                  >
+                    <i class="fas fa-graduation-cap mr-1"></i> Final Grade:
+                    <strong>{{ detail.final_grade }}</strong>
+                  </span>
+                </div>
+                {% endif %}
+
+                <p
+                  class="experience-desc"
+                  style="line-height: 1.6; color: #adb5bd"
                 >
-              </p>
-              {% endif %}
+                  {{ detail.description }}
+                </p>
+              </div>
+            </div>
+            {% endif %} {% endfor %}
+          </div>
+          {% endif %} {% if site.show_author_certificates_details == true %}
+          <div class="card">
+            <h1 class="card-title">Certificates</h1>
+            <br />
+            {% assign visible_certs = site.author_certificates_details | where:
+            "visibility", true %}
+            <div class="certificates-scroll-container">
+              {% for detail in visible_certs %}
+              <div class="row certificate-card">
+                <div class="col-md-3">
+                  <a
+                    href="{{site.url}}{{site.baseurl}}/assets/img/certificates/{{ detail.certificate_thumbnail}}"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      src="{{site.url}}{{site.baseurl}}/assets/img/certificates/{{ detail.certificate_thumbnail}}"
+                      class="certificate-img"
+                    />
+                  </a>
+                </div>
+                <div class="col-md-9 certificate-info">
+                  <h4 class="certificate-title">
+                    {{detail.certificate_title }}
+                  </h4>
+                  <h6 class="certificate-info">
+                    Provided by:
+                    <a
+                      href="{{detail.certificate_provider_url}}"
+                      target="_blank"
+                      >{{detail.certificate_provider}}</a
+                    >
+                  </h6>
+                  <p class="certificate-desc">
+                    Skills: {{detail.certificate_skills}}
+                  </p>
+                  {% if detail.certificate_url %}
+                  <p>
+                    <a href="{{detail.certificate_url}}" target="_blank"
+                      >Certificate URL</a
+                    >
+                  </p>
+                  {% endif %}
+                </div>
+              </div>
+              {% unless forloop.last %}
+              <hr class="certificate-divider" />
+              {% endunless %} {% endfor %}
             </div>
           </div>
-          {% unless forloop.last %}
-          <hr class="certificate-divider" />
-          {% endunless %} {% endfor %}
+          {% endif %} {% if site.show_author_volunteering_details == true %}
+          <div class="card">
+            <h1 class="card-title">Volunteering</h1>
+            <br />
+            {% for detail in site.author_volunteering_details %} {% if
+            detail.visibility == true %}
+            <div class="row">
+              <div class="col-12 col-md-3 col-lg-2">
+                <img
+                  src="{{site.url}}{{site.baseurl}}/assets/img/{{ detail.company_logo}}"
+                  class="company-logo img-fluid"
+                />
+              </div>
+              <div class="col-12 col-md-9 col-lg-10 center">
+                <h4 class="experience-title">{{detail.event_name}}</h4>
+                <h6 class="experience-info">{{detail.location}}</h6>
+                <p class="experience-desc">{{detail.description}}</p>
+                <p>
+                  <a href="{{detail.college_url}}" target="_blank"
+                    >{{ detail.event_url}}</a
+                  >
+                </p>
+              </div>
+            </div>
+            {% endif %} {% endfor %}
+          </div>
+          {% endif %}
         </div>
       </div>
-      {% endif %}
     </div>
   </div>
 </div>

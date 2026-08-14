@@ -26,7 +26,7 @@ urls:
 author_logo: profile.png
 author: Ricardo Simões
 author_bio: Hi, my name is Ricardo Simões. Informatics Engineering Student at Universidade de Coimbra, currently on my Master's degree, having finished my Bachelor with a final grade of 15. I love Software Development and I aspire to be a Fullstack Developer as I like to develop every part of the entire software, and I'm currently working on some personal projects, such as ShelfLogr. I like to go to the gym, listen to music, play football and watching movies and series.
-author_email: 'ricardo.andre.simoes@gmail.com'
+#author_email: 'ricardo.andre.simoes@gmail.com'
 author_location: Portugal
 #author_website_url: 'www.linkedin.com/in/ricardo-andré-simões-0716b4280'
 typewrite-text: Software Developer Enthusiast
@@ -46,28 +46,41 @@ author_skills:
     'API Development',
     'Cisco Routers',
   ]
+author_language_skills:
+  - language: Portuguese
+    code: false
+    detail: ['Native']
+  - language: English
+    code: true
+    detail: ['C1', 'Advanced']
+  - language: Spanish
+    code: true
+    detail: ['B1', 'Intermediate']
 
 # Experiences
 author_work_experiences:
   - company_name: BSWEBCONNECT
-    company_logo: 2bwebconnect_logo.png
+    company_logo: /work/2bwebconnect_logo.png
     company_url: https://bswebconnect.pt/
     designation: Fullstack Developer
+    period: ['July 2025', 'September 2025']
     description: Summer Internship refactoring a Web App in PHP and improving the existing API and Database.
     visibility: true
 
 # Education
 author_education_details:
-  - college_logo: uc_logo.png
+  - college_logo: /education/uc_logo.png
     college_name: Universidade de Coimbra
     college_url: https://www.uc.pt/
-    college_degree: Informatics Engineering
-    description: Bachelor in Informatics Engineering with a final grade of 15. Worked with Python, Java, C and C++, Cisco Routers, API, Databases and Distributed Systems
+    college_degree: Bachelor in Informatics Engineering
+    period: ['September 2023', 'June 2026']
+    final_grade: 15
+    description: Worked with Python, Java, C and C++, Cisco Routers, API, Databases and Distributed Systems
     visibility: true
 
 # Projects
 author_project_details:
-  - project_thumbnail: ShelfLogr_logo.png
+  - project_thumbnail: /projects/ShelfLogr_logo.png
     project_title: ShelfLogr
     project_description: Mobile App that allows the user to log the books read, create wishlists and receive AI given suggestions
     project_url: 'https://github.com/RAGilSimoes/ShelfLogr'
@@ -161,6 +174,20 @@ author_certificates_details:
     certificate_provider_url: https://www.postman.com/
     visibility: true
 
+author_volunteering_details:
+  - event_name: 'JNation 2026'
+    location: 'Convento São Francisco - Coimbra'
+    description: 'Conference about Java, JavaScript, Cloud, Machine Learning and AI'
+    company_logo: '/volunteering/jnation.png'
+    event_url: 'https://jnation.pt/'
+    visibility: true
+  - event_name: 'JNation 2025'
+    location: 'Convento São Francisco - Coimbra'
+    description: 'Conference about Java, JavaScript, Cloud, Machine Learning and AI'
+    company_logo: '/volunteering/jnation.png'
+    event_url: 'https://jnation.pt/'
+    visibility: true
+
 # social links
 #twitter_username: xplor4r
 github_username: RAGilSimoes
@@ -200,6 +227,7 @@ show_author_work_experiences: true
 show_author_education_details: true
 show_author_project_details: true
 show_author_certificates_details: true
+show_author_volunteering_details: true
 
 # pagination of posts
 paginate: 4
