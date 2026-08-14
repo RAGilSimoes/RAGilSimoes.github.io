@@ -25,7 +25,7 @@ urls:
 
 author_logo: profile.png
 author: Ricardo Simões
-author_bio: Hi, my name is Ricardo Simões. Computer Engineering Student at Universidade de Coimbra, currently on my Master's degree, having finished my Bachelor with a final grade of 15. I love Software Development and I aspire to be a Fullstack Developer as I like to develop every part of the entire software, and I'm currently working on some personal projects, such as ShelfLogr. I like to go to the gym, listen to music, play football and watching movies and series.
+author_bio: Hi, my name is Ricardo Simões. Informatics Engineering Student at Universidade de Coimbra, currently on my Master's degree, having finished my Bachelor with a final grade of 15. I love Software Development and I aspire to be a Fullstack Developer as I like to develop every part of the entire software, and I'm currently working on some personal projects, such as ShelfLogr. I like to go to the gym, listen to music, play football and watching movies and series.
 author_email: 'ricardo.andre.simoes@gmail.com'
 author_location: Portugal
 #author_website_url: 'www.linkedin.com/in/ricardo-andré-simões-0716b4280'
@@ -61,8 +61,8 @@ author_education_details:
   - college_logo: uc_logo.png
     college_name: Universidade de Coimbra
     college_url: https://www.uc.pt/
-    college_degree: Computer Engineering
-    description: Bachelor in Computer Engineering with a final grade of 15. Worked with Python, Java, C and C++, Cisco Routers, API, Databases and Distributed Systems
+    college_degree: Informatics Engineering
+    description: Bachelor in Informatics Engineering with a final grade of 15. Worked with Python, Java, C and C++, Cisco Routers, API, Databases and Distributed Systems
     visibility: true
 
 # Projects
@@ -99,7 +99,7 @@ author_project_details:
 author_certificates_details:
   - certificate_thumbnail: bachelors_degree.png
     certificate_title: Bachelor's Degree
-    certificate_skills: Python, Java, C and C++, Cisco Routers, API, Databases, Distributed Systems
+    certificate_skills: Python, Java, C and C++, Cisco Routers, API, Databases, Distributed Systems, Project Management
     certificate_url:
     certificate_provider: Universidade de Coimbra
     certificate_provider_url: https://www.uc.pt/
