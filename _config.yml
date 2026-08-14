@@ -25,13 +25,27 @@ urls:
 
 author_logo: profile.png
 author: Ricardo Simões
-author_bio: Hi, my name is Ricardo Simões. Computer Engineering Student at Universidade de Coimbra, currently on my Master's degree, having finished my Bachelor with a final grade of 15. I love Software Development, and I'm currently working on some personal projects, such as ShelfLogr. I like to go to the gym, listen to music, play football and watching movies and series.
+author_bio: Hi, my name is Ricardo Simões. Computer Engineering Student at Universidade de Coimbra, currently on my Master's degree, having finished my Bachelor with a final grade of 15. I love Software Development and I aspire to be a Fullstack Developer as I like to develop every part of the entire software, and I'm currently working on some personal projects, such as ShelfLogr. I like to go to the gym, listen to music, play football and watching movies and series.
 author_email: 'ricardo.andre.simoes@gmail.com'
 author_location: Portugal
 #author_website_url: 'www.linkedin.com/in/ricardo-andré-simões-0716b4280'
 typewrite-text: Software Developer Enthusiast
 hero_cover_img: sample_cover.jpg # replace this for changing homepage cover (eg. try cover.jpeg). Image should be in /assets/img
-author_skills: Python, Java, Javascript/HTML/CSS, TypeScript, React, Cisco Routers, API Development, PHP, Node.JS, Express.JS, Ionic
+author_skills:
+  [
+    'Python',
+    'Java',
+    'HTML/CSS/JavaScript',
+    'TypeScript',
+    'React',
+    'Ionic',
+    'Node.Js',
+    'Express.Js',
+    'PHP',
+    'Front-End Development',
+    'API Development',
+    'Cisco Routers',
+  ]
 
 # Experiences
 author_work_experiences:
@@ -58,7 +72,28 @@ author_project_details:
     project_description: Mobile App that allows the user to log the books read, create wishlists and receive AI given suggestions
     project_url: 'https://github.com/RAGilSimoes/ShelfLogr'
     visibility: true
-    tech-stack: Ionic, React, Node.JS, Express.JS, Neon.tech, PostgreSQL
+    tech_stack:
+      - display_name: 'Front-End'
+        tech:
+          - name: 'Ionic'
+            badge_url: 'https://img.shields.io/badge/Ionic-%233880FF.svg?style=for-the-badge&logo=Ionic&logoColor=white'
+          - name: 'React'
+            badge_url: 'https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB'
+
+      - display_name: 'Back-end'
+        tech:
+          - name: 'NodeJS'
+            badge_url: 'https://img.shields.io/badge/Node.js-%236DA55F.svg?style=for-the-badge&logo=nodedotjs&logoColor=white'
+          - name: 'Express.js'
+            badge_url: 'https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB'
+
+      - display_name: 'DataBase'
+        tech:
+          - name: 'PostgreSQL'
+            badge_url: 'https://img.shields.io/badge/postgresql-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white'
+          - name: 'Neon.tech'
+            badge_url: 'https://img.shields.io/badge/neon.tech-%2300E599.svg?style=for-the-badge&logo=neon&logoColor=black'
+    developing: true
 
 # Certificates
 author_certificates_details:

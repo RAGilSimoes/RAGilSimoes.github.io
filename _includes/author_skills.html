@@ -1,3 +1,19 @@
 {% if site.author_skills %}
-<p>{{ site.author_skills }}</p>
+<div class="d-flex flex-wrap" style="gap: 8px; margin-top: 15px">
+  {% for skill in site.author_skills %}
+  <span
+    style="
+      background-color: #2b3035;
+      border: 1px solid #495057;
+      border-radius: 15px;
+      padding: 5px 12px;
+      font-size: 0.85rem;
+      color: #e9ecef;
+      white-space: nowrap;
+    "
+  >
+    {{ skill }}
+  </span>
+  {% endfor %}
+</div>
 {% endif %}

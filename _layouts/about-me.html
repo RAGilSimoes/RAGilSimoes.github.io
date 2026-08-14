@@ -20,6 +20,7 @@ layout: default
         <p class="profile-links">
           {% if site.github_username %}
           <a
+            target="_blank"
             class="social-link"
             href="http://github.com/{{ site.github_username }}"
           >
@@ -27,6 +28,7 @@ layout: default
           </a>
           {% endif %} {% if site.linkedin_username %}
           <a
+            target="_blank"
             class="social-link"
             href="http://linkedin.com/in/{{ site.linkedin_username }}"
           >
@@ -40,19 +42,20 @@ layout: default
           <a
             href="https://www.google.com/maps/search/?api=1&query={{ site.author_location }}"
             class="social-link"
+            target="_blank"
             ><i class="fas fa-map-marker-alt"></i> {{ site.author_location }}</a
           >
         </h6>
         {% endif %} {% if site.author_email %}
         <h6>
-          <a href="mailto:{{ site.author_email }}"
+          <a href="mailto:{{ site.author_email }}" target="_blank"
             ><i class="fas fa-envelope" class="social-link"></i> {{
             site.author_email }}</a
           >
         </h6>
         {% endif %} {% if site.author_website_url %}
         <h6>
-          <a href="{{ site.author_website_url }}"
+          <a href="{{ site.author_website_url }}" target="_blank"
             ><i class="fas fa-link" class="social-link"></i> {{
             site.author_website_url }}</a
           >
@@ -88,12 +91,50 @@ layout: default
           </div>
           <div class="col-12 col-md-9 col-lg-10 center">
             <h4 class="experience-title">
-              {{ project.project_title }} - <i>Still in development</i>
+              {{ project.project_title }} {% if project.developing %} -
+              <i>Still in development</i>
+              {% endif %}
             </h4>
-            <p class="experience-desc">{{ project.project_description }}</p>
-            <p class="experience-info">Tech Stack: {{project.tech-stack}}</p>
+
+            <p class="experience-desc">
+              <span style="font-weight: bolder">Description:</span> {{
+              project.project_description }}
+            </p>
+
+            <p class="experience-info" style="font-weight: bolder">
+              Tech Stack:
+            </p>
+
+            <ul>
+              {% for part in project.tech_stack %}
+              <li
+                class="d-flex flex-column flex-md-row align-items-start align-items-md-center mb-3"
+                style="gap: 8px"
+              >
+                <span style="font-weight: bold; white-space: nowrap"
+                  >{{ part.display_name }}:</span
+                >
+
+                <div
+                  class="d-flex flex-column flex-md-row align-items-start"
+                  style="gap: 6px"
+                >
+                  {% for technologie in part.tech %}
+                  <img
+                    src="{{ technologie.badge_url }}"
+                    alt="{{ technologie.name }}"
+                  />
+                  {% endfor %}
+                </div>
+              </li>
+              {% endfor %}
+            </ul>
+
             <p>
-              <a class="project-link" href="{{project.project_url}}"
+              <a
+                class="project-link"
+                href="{{project.project_url}}"
+                target="_blank"
                 >Link to GitHub Repo</a
               >
             </p>
@@ -121,7 +162,11 @@ layout: default
             <h4 class="experience-title">{{ exp.designation }}</h4>
             <h6 class="experience-info">{{ exp.company_name}}</h6>
             <p class="experience-desc">{{ exp.description }}</p>
-            <p><a href="{{exp.company_url}}">{{ exp.company_url}}</a></p>
+            <p>
+              <a href="{{exp.company_url}}" target="_blank"
+                >{{ exp.company_url}}</a
+              >
+            </p>
           </div>
         </div>
         {% endif %} {% endfor %}
@@ -143,7 +188,11 @@ layout: default
             <h4 class="experience-title">{{detail.college_degree }}</h4>
             <h6 class="experience-info">{{detail.college_name}}</h6>
             <p class="experience-desc">{{detail.description}}</p>
-            <p><a href="{{detail.college_url}}">{{ detail.college_url}}</a></p>
+            <p>
+              <a href="{{detail.college_url}}" target="_blank"
+                >{{ detail.college_url}}</a
+              >
+            </p>
           </div>
         </div>
         {% endif %} {% endfor %}
@@ -173,7 +222,7 @@ layout: default
               <h4 class="certificate-title">{{detail.certificate_title }}</h4>
               <h6 class="certificate-info">
                 Provided by:
-                <a href="{{detail.certificate_provider_url}}"
+                <a href="{{detail.certificate_provider_url}}" target="_blank"
                   >{{detail.certificate_provider}}</a
                 >
               </h6>
@@ -182,7 +231,9 @@ layout: default
               </p>
               {% if detail.certificate_url %}
               <p>
-                <a href="{{detail.certificate_url}}">Certificate URL</a>
+                <a href="{{detail.certificate_url}}" target="_blank"
+                  >Certificate URL</a
+                >
               </p>
               {% endif %}
             </div>
